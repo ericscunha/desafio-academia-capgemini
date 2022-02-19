@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 import static br.com.ericscunha.desafio.dominio.Questao.*;
 
 /**
@@ -32,7 +30,6 @@ import static br.com.ericscunha.desafio.dominio.Questao.*;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         // Executa o processo de escolha das questões
         escolheQuestao();
     }

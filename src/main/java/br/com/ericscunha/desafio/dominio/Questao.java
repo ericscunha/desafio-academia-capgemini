@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static br.com.ericscunha.desafio.dominio.Escada.*;
+import static br.com.ericscunha.desafio.dominio.Cadastro.*;
 
 /**
  * Classe responsável por criar os menus de acesso as questões e
@@ -99,11 +100,29 @@ public class Questao {
             System.out.println("Questão 1 - Informe a quantidade de degraus que deseja:");
             int n = scan.nextInt();
             // Executa o metodo que monta a escada de acordo com o número de degraus informado
-            montaDegraus(n);
+            String escada = montaDegraus(n);
+            if(!escada.isEmpty()) {
+                System.out.println("Escada:");
+                System.out.println(escada);
+                System.out.printf("Escada com %o degrau(s) construída com sucesso!!!\n%n", n);
+            }
             valido = true;
         } else if (numeroQuestao == 2) {
+            /* Executa uma simulação de cadastro e valida a senha */
+            // Imprime o título da questão
+            System.out.println("Questão 2 - Valida senha forte.");
+            // Solicita e captura o nome do cadastro
+            System.out.println("Informe o nome do usuário:");
+            String nome = scan.next();
+            // Solicita e captura a senha informada
+            System.out.println("Informe a senha do usuário:");
+            String senha = scan.next();
 
-            valido = false;
+            // Valida a senha e retorna se é válida ou não
+            boolean senhaValida = cadastroUsuario(nome, senha);
+            if(senhaValida)
+                System.out.println("Senha Forte! Cadastro realizado com sucesso!");
+            valido = true;
         } else if (numeroQuestao == 3) {
 
             valido = false;
