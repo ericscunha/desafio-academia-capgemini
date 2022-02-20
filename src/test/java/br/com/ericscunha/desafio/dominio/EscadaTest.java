@@ -9,12 +9,13 @@ public class EscadaTest {
     @Test
     public void montaDegraus() {
         String escada = Escada.montaDegraus(6);
-        String escadaref = "     *" + "\n" +
-                           "    **" + "\n" +
-                           "   ***" + "\n" +
-                           "  ****" + "\n" +
-                           " *****" + "\n" +
-                           "******";
+        String escadaref = """
+                                    *
+                                   **
+                                  ***
+                                 ****
+                                *****
+                               ******""";
         assertEquals(escadaref, escada);
     }
 }

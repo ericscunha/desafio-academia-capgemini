@@ -60,9 +60,9 @@ public class Questao {
      */
     private static void montaMenu() {
         System.out.println("Informe a opção que deseja acessar?");
-        System.out.println("[ 1 ] - Desafio Questão 1 (Escada)");
-        System.out.println("[ 2 ] - Desafio Questão 2 (Senha)");
-        System.out.println("[ 3 ] - Desafio Questão 3 (Anagrama)");
+        System.out.println("[ 1 ] - Questão 01 - Construindo Escada");
+        System.out.println("[ 2 ] - Questão 02 - Validando Senhas");
+        System.out.println("[ 3 ] - Questão 03 - Quantidade de anagramas na palavra");
         System.out.println("[ 0 ] - Encerrar aplicação");
     }
 
