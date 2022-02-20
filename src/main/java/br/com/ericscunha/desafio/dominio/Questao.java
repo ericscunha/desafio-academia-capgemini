@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import static br.com.ericscunha.desafio.dominio.Escada.*;
 import static br.com.ericscunha.desafio.dominio.Cadastro.*;
+import static br.com.ericscunha.desafio.dominio.Anagrama.*;
 
 /**
  * Classe responsável por criar os menus de acesso as questões e
@@ -73,7 +74,7 @@ public class Questao {
         boolean resultado = false; // váriavel de controle para identificar se deseja retornar ao menu principal
 
         // Captura a opção do usuário
-        System.out.println("Para retornar ao menu principal informe 9. Para encerrar informe 0.");
+        System.out.println("\nPara retornar ao menu principal informe 9. Para encerrar informe 0.");
         int opcao = scan.nextInt();
 
         if (opcao == 9) resultado = true; // Informa que deseja retorna ao menu principal
@@ -124,8 +125,14 @@ public class Questao {
                 System.out.println("Senha Forte! Cadastro realizado com sucesso!");
             valido = true;
         } else if (numeroQuestao == 3) {
+            // Imprime o título da questão e captura a palavra
+            System.out.println("Questão 3 - Digite uma palavra e veja partes correspondem a um Anagrama:");
+            String palavra = scan.next();
 
-            valido = false;
+            // Imprime a quantidade de Anagramas
+            System.out.println("Essa palavra possui: ");
+            System.out.println(contaAnagrama(palavra));
+            valido = true;
         }
         return valido;
     }

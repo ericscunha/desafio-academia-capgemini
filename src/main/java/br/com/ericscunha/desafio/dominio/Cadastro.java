@@ -40,45 +40,41 @@ public class Cadastro {
         boolean senhaValida = true;
 
         /* Valida a senha quanto ao tamanho */
-        int countChar = 0;
         int minChar = 6;
-        countChar = tamanhoSenha(senha, minChar); // Retorna a quantidade de caracteres necessário para uma senha forte
+        int countChar = tamanhoSenha(senha, minChar); // Retorna a quantidade de caracteres necessário para uma senha forte
         if(countChar > 0) {
-            System.out.println("Senha Fraca! Adicione pelo menos " + countChar + " caracteres para tornar uma senha segura.");
+            System.out.println("Saída: " + countChar);
+            System.out.println("\nObservação: Senha Fraca! Adicione pelo menos " + countChar + " caracteres para tornar uma senha segura.");
             senhaValida = false;
         }
 
         /* Valida se possui digito */
-        int countDig = 0;
         int minDig = 1;
-        countDig = digitoSenha(senha,minDig);
+        int countDig = digitoSenha(senha,minDig);
         if(countDig < minDig) {
             System.out.println("Atenção! Uma senha forte precisa ter no mínimo " + minDig + " número(s).");
             senhaValida = false;
         }
 
         /* Valida se possui letra maiuscula */
-        int countUpper = 0;
         int minUpper = 1;
-        countUpper = letraSenha(senha,minUpper,"U");
+        int countUpper = letraSenha(senha,minUpper,"U");
         if(countUpper < minUpper) {
             System.out.println("Atenção! Uma senha forte precisa ter no mínimo " + minUpper + " letra(s) maiusculas.");
             senhaValida = false;
         }
 
         /* Valida se possui letra maiuscula */
-        int countLower = 0;
         int minLower = 1;
-        countLower = letraSenha(senha,minLower,"L");
+        int countLower = letraSenha(senha,minLower,"L");
         if(countLower < minLower) {
             System.out.println("Atenção! Uma senha forte precisa ter no mínimo " + minLower + " letra(s) minusculas.");
             senhaValida = false;
         }
 
         /* Valida se possui uma quantidade minima de caracteres especias !@#$%^&*()-+ */
-        int countEspecial = 0;
         int minEspecial = 1;
-        countEspecial = especialSenha(senha,minEspecial);
+        int countEspecial = especialSenha(senha,minEspecial);
         if(countEspecial < minEspecial) {
             System.out.println("Atenção! Uma senha forte precisa ter no mínimo " + minEspecial + " caracter especial !@#$%^&*()-+");
             senhaValida = false;
@@ -118,12 +114,12 @@ public class Cadastro {
         int checaQtd = 0; // Identifica quantos digitos forem encontrados
 
         // Loop de verificação dos caracteres
-        for(int i = 0; i < charSenha.length; i++){
+        for (char c : charSenha) {
             /* Verifica se o caracter é um digito */
-            if(Character.isDigit(charSenha[i])) {
+            if (Character.isDigit(c)) {
                 checaQtd++; // incrementa a variável sempre que localizar um digito
                 /* Para o loop se a quantidade encontrada for maior ou igual ao parametro minimo */
-                if(checaQtd >= quantidade) break;
+                if (checaQtd >= quantidade) break;
             }
         }
         return checaQtd; // Retorna a quantidade encontrada
@@ -142,13 +138,13 @@ public class Cadastro {
         int checaQtd = 0; // Identifica quantos digitos forem encontrados
 
         // Loop de verificação dos caracteres
-        for(int i = 0; i < charSenha.length; i++){
+        for (char c : charSenha) {
             /* Verifica se o caracter é um digito */
-            if (!Character.isDigit(charSenha[i])) {
+            if (!Character.isDigit(c)) {
                 /* Verifica se o caracter é uma letra Maiuscula ou Minuscula de acordo
                  * com o parametro "tipo" */
-                if(((tipo.equals("U")) && (Character.isUpperCase(charSenha[i]))) || // Testa UpperCase se tipo = "U"
-                        ((tipo.equals("L")) && (Character.isLowerCase(charSenha[i])))) { // Testa LowerCase se tipo = "L"
+                if (((tipo.equals("U")) && (Character.isUpperCase(c))) || // Testa UpperCase se tipo = "U"
+                        ((tipo.equals("L")) && (Character.isLowerCase(c)))) { // Testa LowerCase se tipo = "L"
                     checaQtd++; // incrementa a variável sempre que localizar um digito
 
                     /* Para o loop se a quantidade encontrada for maior ou igual ao parametro minimo */
@@ -171,9 +167,9 @@ public class Cadastro {
         int checaQtd = 0; // Identifica quantos digitos forem encontrados
 
         // Loop de verificação dos caracteres
-        for(int i = 0; i < charEspecial.length; i++){
+        for (String s : charEspecial) {
             /* Verifica se o caracter é um digito */
-            if (senha.contains(charEspecial[i])){
+            if (senha.contains(s)) {
                 checaQtd++; // incrementa a variável sempre que localizar um digito
                 /* Para o loop se a quantidade encontrada for maior ou igual ao parametro minimo */
                 if (checaQtd >= quantidade) break;
