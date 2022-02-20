@@ -1,7 +1,8 @@
 <h1>
 DESAFIO DE PROGRAMAÇÃO - ACADEMIA CAPGEMINI</h1>
 
-<p>Este é um projeto que compõe a terceira etapa do processo de seleção para a <strong> <a href="http://capgemini.proway.com.br/">Academia Capgemini 2022</a></strong>. O objetivo dessa etapa é testar os conhecimentos do candidato em lógica de programação.
+<p>Este é um projeto que compõe a terceira etapa do processo de seleção para a <strong> <a href="http://capgemini.proway.com.br/" target="_blank">Academia Capgemini 2022</a></strong>. O objetivo dessa etapa é testar os conhecimentos do candidato em lógica de programação.
+
 
 Foram propostos 3 desafios com diferentes níveis de dificuldades, que serão detalhados posteriormente.
 
@@ -10,29 +11,32 @@ Foram propostos 3 desafios com diferentes níveis de dificuldades, que serão de
 🛑 Pré-requistos
 </h2>
 
-- [x] <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java JDK 17 </a>
-- [x] IDE para desenvolvimento Java (Foi utilizado o <a href="https://www.jetbrains.com/pt-br/idea/download/#section=windows">Intellij</a>)
-- [x] <a href="https://maven.apache.org/download.cgi">Maven</a>
+- [x] <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html" target="_blank">Java JDK 17 </a>
+- [x] IDE para desenvolvimento Java (Foi utilizado o <a href="https://www.jetbrains.com/pt-br/idea/download/#section=windows" target="_blank">Intellij</a>)
+- [x] <a href="https://maven.apache.org/download.cgi" target="_blank">Maven</a>
 
 <h2> 📚 Conteúdos</h2>
 <ol>
-    <li><a href="#desafios">Entendendo os Desafios</a></li>
+    <li>Entendendo os Desafios</li>
     	<ul>
-            <li><a href="#questao1">Questão 01</a></li>
-            <li><a href="#questao2">Questão 02</a></li>
-            <li><a href="#questao3">Questão 03</a></li>
+            <li>Questão 01</li>
+            <li>Questão 02</li>
+            <li>Questão 03</li>
 	    </ul>
-    <li><a href="#projeto">Acesso ao projeto</a></li>
-    <li><a href="#executando">Executando o projeto</a></li>
-    <li><a href="#recurso">Recursos</a></li>
-    <li><a href="#uso">Orientações de uso</a></li>
+    <li>Acesso ao projeto</li>
+    <li>Executando o projeto</li>
+    <li>Executando testes de unidade</li>
+    <li>Recursos</li>
+    <li>Orientações de uso</li>
 </ol>
 
-<h2>Entendendo os Desafios<a name="#desafio"></a></h2>
 
-<h3>Questão 01<a href="#questao1"></a></h3>
+<h2>Entendendo os Desafios</h2>
+
+<h3>Questão 01</h3>
 <p>
     Escreva um algoritmo que mostre na tela uma escada de tamanho n utilizando o caractere * e espaços. A base e altura da escada devem ser iguais ao valor de n. A última linha não deve conter nenhum espaço. </p>
+
 
 **Exemplo:**
 
@@ -42,7 +46,7 @@ n = 6
 
 **Saída:**
 
-![Questao01](C:\Users\Eric\Documents\Questao01.png)
+<img src = "img\Questao01.png">
 
 <h3>Questão 02<a href="#questao2"></a></h3>
 <p>Débora se inscreveu em uma rede social para se manter em contato com seus amigos. A página de cadastro exigia o preenchimento dos campos de nome e senha, porém a senha precisa ser forte. O site considera uma senha forte quando ela satisfaz os seguintes critérios:</p>
@@ -70,10 +74,9 @@ Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, trans
 **Exemplo 1)**
 Entrada: ovo
 Saída: 2
-
 **Explicação:**
 A lista de todos os anagramas pares são: [o, o], [ov, vo] que estão nas posições [[0], [2]], [[0, 1], [1, 2]] respectivamente. 
-    
+
 **Exemplo 2)**
 Entrada: ifailuhkqq
 Saída: 3
@@ -81,7 +84,7 @@ Saída: 3
 **Explicação:**
 A lista de todos os anagramas pares são: [i, i], [q, q] e [ifa, fai] que estão nas posições [[0], [3]], [[8],  [9]] e [[0, 1, 2], [1, 2, 3]].
 
-<h2>Acesso ao projeto<a name="#projeto"></a></h2>
+<h2>Acesso ao projeto</h2>
 
 Para ter acesso, é preciso clonar o projeto do GitHub em um diretório de sua preferência:
 
@@ -92,7 +95,7 @@ git clone https://github.com/ericscunha/desafio-academia-capgemini.git
 
 Agora você pode executar os vários comandos abaixo.
 
-<h2>Executando o projeto<a name="#projeto"></a></h2>
+<h2>Executando o projeto</h2>
 
 Caso deseje executar diretamente o projeto através do arquivo **.jar* disponibilizado no projeto, execute o comando:
 
@@ -103,14 +106,25 @@ java -jar target/desafio-academia-capgemini-1.0-RELEASE.jar
 
 É necessário ter o **Java JDK 17 ou superior** instalado, conforme os pré-requisitos.
 
-<h2>Recursos<a name="#recurso"></a></h2>
+<h2>Executando teste de unidade</h2>
+
+Executa todos os testes do projeto, baseado nos exemplos e requisitos do desafio.
+
+```shell
+cd "diretorio onde foi clonado o projeto"
+mvn test
+```
+
+É necessário ter o **Maven** na máquina, conforme os pré-requisitos.
+
+<h2>Recursos</h2>
 
 - [x] Menu Principal
 - [x] Questão 01 - Construindo Escada
 - [x] Questão 02 - Validando Senhas
 - [x] Questão 03 - Quantidade de anagramas na palavra
 
-<h2>Orientações de uso<a name="#uso"></a></h2>
+<h2>Orientações de uso</h2>
 
 <h3>Passo 1</h3>
 Ao executar a aplicação será exibida no terminal as opções (ver abaixo) possíveis de serem acessadas. Informe a opção deseja para ter acesso ao Desafio e pressione Enter.

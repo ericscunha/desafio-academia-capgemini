@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="br.com.ericscunha.desafio.dominio.EscadaTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="br.com.ericscunha.desafio.dominio.EscadaTest" time="0.026" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -61,5 +61,5 @@
     <property name="java.vendor.version" value="Zulu17.30+15-CA"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="br.com.ericscunha.desafio.dominio.EscadaTest" name="montaDegraus" time="0.004"/>
+  <testcase classname="br.com.ericscunha.desafio.dominio.EscadaTest" name="montaDegraus" time="0.026"/>
 </testsuite>
